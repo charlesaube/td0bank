@@ -1,7 +1,10 @@
 package com.example.td0bank;
 
+import com.example.td0bank.services.ClientService;
+import com.example.td0bank.services.impl.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
@@ -9,8 +12,22 @@ import java.util.Scanner;
 
 @SpringBootApplication
 public class Td0bankApplication {
+/*
+    @Autowired
+    private ClientServiceImpl clientService;
 
+    @Autowired
+    private GestionnaireServiceImpl gestionnaireService;
 
+    @Autowired
+    private BanqueServiceImpl banqueService;
+
+    @Autowired
+    private AdresseServiceImpl adresseService;
+
+    @Autowired
+    private CompteBancaireServiceImpl compteBancaireService;
+*/
     private final Logger log = LoggerFactory.getLogger(Td0bankApplication.class);
     public static void main(String[] args) {
         SpringApplication.run(Td0bankApplication.class, args);

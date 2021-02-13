@@ -21,6 +21,7 @@ public class Banque implements Serializable {
 
     @OneToMany(fetch = FetchType.LAZY)
     private List<Client> clients;
+
     @OneToMany(fetch = FetchType.LAZY)
     private List<Gestionnaire> gestionnaires;
 

@@ -26,14 +26,18 @@ public class CompteBancaire implements Serializable {
     private double soldeActuel;
 
     @ManyToOne(cascade = CascadeType.ALL)
-    private Client propriétaire;
+    private Client proprietaire;
 
-    public CompteBancaire(int numero, TypeCompte type, double soldeInitial,Client propriétaire) {
+    public CompteBancaire(int numero, TypeCompte type, double soldeInitial,Client proprietaire) {
         this.numero = numero;
         this.type = type;
         this.soldeInitial = soldeInitial;
-        this.propriétaire = propriétaire;
+        this.proprietaire = proprietaire;
         this.soldeActuel = soldeInitial;
+    }
+
+    public CompteBancaire() {
+
     }
 
     public int getNumero() {
@@ -69,11 +73,11 @@ public class CompteBancaire implements Serializable {
         this.soldeActuel = soldeActuel;
     }
 
-    public Client getPropriétaire() {
-        return propriétaire;
+    public Client getProprietaire() {
+        return proprietaire;
     }
 
-    public void setPropriétaire(Client propriétaire) {
-        this.propriétaire = propriétaire;
+    public void setProprietaire(Client proprietaire) {
+        this.proprietaire = proprietaire;
     }
 }
